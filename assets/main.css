@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+}
+body{
+    color: rgb(38, 38, 39);
+}
+
+.hero-section{
+    position: relative;
+}
+.hero-section h1{
+    font-size: 64px;
+    line-height: 76px;
+}
+.hero-section p{
+    font-size: 24px;
+    line-height: 34px;
+}
+.overlay-text {
+    position: absolute;
+    padding: 0% 15%;
+    z-index: 0;
+    top:330px;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.btn-dark{
+    background-color: rgb(38, 38, 39) !important;
+    padding: 12px 24px;
+    font-size: 16px;
+    color:white;
+}
+.btn-dark:hover{
+    background-color: rgb(71, 71, 71) !important;
+    transition: all 0.2s ease 0s;
+}
+.navbar-nav li a:hover{
+    color: rgb(71, 71, 71) !important;
+    transition: all 0.2s ease 0s;
+}
+.hero-section span{
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+}
+.txt-underline{
+    cursor: pointer;
+    text-decoration: underline 3px;
+    text-underline-offset: 3px;
+    color:black;
+    font-weight: inherit;
+}
+.txt-underline:hover{
+    color:rgb(71, 71, 71);
+}
+.section-heading{
+    font-size:48px; text-align: center;
+}
+
+.navbar-nav li a{
+    color:black !important;
+    font-weight: normal;
+}
+.navbar{
+    position: absolute; 
+    z-index:1000; 
+    width:100%; 
+    padding:20px 10px;
+}
+.navbar-toggler:focus {
+    outline: none;
+}
+.fa.fa-bars{
+    font-size: 22px;
+}
+
+@media screen and (max-width:1200px){
+    .overlay-text {
+        top:230px;
+    }
+    .overlay-text .col-xl-5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:1201px) and (max-width:1600px){
+    .overlay-text{
+        top:262px;
+    }
+    .overlay-text h1{
+        font-size: 45px;
+        line-height: 59px;
+    }
+    .overlay-text p{
+        font-size: 21px;
+        line-height: 27px;
+    }
+    .overlay-text .btn-dark{
+        padding:7px 16px;
+    }
+}
+
+@media screen and (max-width:990px){
+    .navbar{
+        position: static;
+    }
+    .navbar-collapse{
+        display: flex;
+        flex-direction: column;
+    }
+}
