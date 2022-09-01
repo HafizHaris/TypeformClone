@@ -37,3 +37,76 @@ const UpdateVideo = () => {
   window.addEventListener("resize", function(){
    UpdateVideo();
   });
+
+
+  (function () {
+    "use strict";
+  
+    var carousels = function () {
+      $(".owl-carousel1").owlCarousel({
+        loop: true,
+        center: true,
+        margin: 0,
+        responsiveClass: true,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          680: {
+            items: 2,
+            nav: false,
+            loop: false
+          },
+          1000: {
+            items: 5,
+            nav: true
+          }
+        }
+      });
+    };
+  
+    (function ($) {
+      carousels();
+    })(jQuery);
+  })();
+
+
+  (function () {
+    "use strict";
+  
+    var design_carousels = function () {
+      $(".owl-carousel-design-section").owlCarousel({
+        loop: false,
+        center: true,
+        margin: 0,
+        responsiveClass: true,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          680: {
+            items: 2,
+            nav: false,
+            loop: false
+          },
+          1000: {
+            items: 3,
+            nav: true
+          }
+        }
+      });
+    };
+  
+    (function ($) {
+      design_carousels();
+    })(jQuery);
+  })();
+  
+  function DesignArrowClick(){
+    document.querySelector('.owl-next').click();
+    document.getElementById('arrow-section').style.display = "none";
+  }

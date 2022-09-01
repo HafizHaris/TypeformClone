@@ -103,7 +103,13 @@ i{
     font-size: 45px;
     font-weight: normal !important;
 }
-
+.testimonial-section .text-section{
+    max-width: 420px;
+}
+.testimonial-section .text-section h2{
+    font-size: 45px;
+    text-align: center;
+}
 .signup-section .text-section h6{
     font-weight: bold !important;
 }
@@ -128,6 +134,40 @@ i{
 }
 .result-section .text-section{
     height: 100%;
+}
+.image-section{
+    display: flex;
+    justify-content: center;
+}
+footer{
+    padding-top: 70px;
+    background-color: var(--dark);
+
+}
+footer *{
+    color:white;
+}
+footer h3{
+    font-size:16px;
+    line-height: 24px;
+    font-weight: normal !important;
+    margin-bottom: 20px;;
+    font-weight: normal !important;
+}
+footer a{
+    display: block;
+    margin-bottom: 10px;
+}
+footer span{
+    font-size:14px;
+}
+footer a{
+    transition: all 0.2s ease 0s;
+}
+footer a:hover{
+    text-decoration: none;
+    color: white;
+    margin-left:8px;
 }
 @media screen and (max-width:1200px){
     .overlay-text {
@@ -177,6 +217,9 @@ i{
     .hero-section p{
         font-size:21px;
         line-height: 31px;
+    }
+    .arrow-section{
+        display: none;
     }
 }
 @media screen and (min-width:990px) and (max-width:1065px){
@@ -239,6 +282,10 @@ i{
     .static-text-section .text-section h2{
         font-size: 30px;
     }
+    .testimonial-section .text-section h2{
+        font-size: 30px ;
+        font-weight: normal !important;
+    }
     .result-section h3{
         font-size: 24px;
         font-weight: normal !important;
@@ -262,39 +309,132 @@ i{
     .result-section .text-section{
         margin-bottom: 50px;
     }
+    footer h3{
+        margin-top: 50px;
+    }
     
 }
-.image-section{
-    display: flex;
-    justify-content: center;
-}
-footer{
-    padding-top: 70px;
-    background-color: var(--dark);
 
+
+.testimonial-section {
+    position: relative;
 }
-footer *{
-    color:white;
-}
-footer h3{
-    font-size:16px;
-    line-height: 24px;
-    font-weight: normal !important;
-    margin-bottom: 20px;;
-    font-weight: normal !important;
-}
-footer a{
+  .testimonial-section h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 50px;
+  }
+  .testimonial-section .owl-stage-outer {
+    padding: 30px 0;
+  }
+  .testimonial-section .owl-nav {
+    display: none;
+  }
+  .testimonial-section .owl-dots {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .testimonial-section .owl-dots span {
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
     display: block;
+    background: #fff;
+    border: 2px solid var(--dark);
+    margin: 0 5px;
+  }
+  .testimonial-section .owl-dots .active {
+    box-shadow: none;
+  }
+  .testimonial-section .owl-dots .active span {
+    background: var(--dark) !important;
+    box-shadow: none;
+    height: 12px;
+    width: 12px;
+    margin-bottom: -1px;
+  }
+  .testimonial-section .card {
+    background: #fff;
+    margin: 0 20px;
+    padding: 25px 10px;
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 2px 4px, rgb(0 0 0 / 6%) 0px 2px 12px;
+    border: 0;
+    
+  }
+  .testimonial-section .card .card-img-top {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    width: 72px;
+    height: 72px;
+  }
+  .testimonial-section .card h5 {
+    color: var(--darkhover);
+    /* font-size: 30px; */
+    line-height: 1.5;
+    font-weight: normal !important;
+  }
+  .testimonial-section .card h5 span {
+    font-size: 18px;
+    color: #666666;
+  }
+  .testimonial-section .card p {
+    font-size: 18px;
+    color: #555;
+    padding-bottom: 15px;
+  }
+  .testimonial-section .active {
+    opacity: 0.5;
+    transition: all 0.3s;
+  }
+  .testimonial-section .center {
+    opacity: 1;
+  }
+  .testimonial-section .center h5 {
+    font-size: 21px;
+  }
+  .testimonial-section .center h5 span {
+    font-size: 20px;
+  }
+  .testimonial-section .center .card-img-top {
+    max-width: 100%;
+    margin-top: 27px;
     margin-bottom: 10px;
-}
-footer span{
-    font-size:14px;
-}
-footer a{
-    transition: all 0.2s ease 0s;
-}
-footer a:hover{
-    text-decoration: none;
-    color: white;
-    margin-left:8px;
-}
+  }
+  
+  @media (max-width: 767px) {
+    .testimonial-section {
+      margin-top: 20px;
+    }
+  }
+  .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    outline: 0;
+  }
+  .owl-carousel button.owl-dot {
+    outline: 0;
+  }
+  .card-body .card-text{
+    font-size: 16px;
+  }
+  .card-body .brand-logo{
+    width: 75px !important;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .owl-carousel-design-section .image-section{
+    padding: 12px;
+  }
+  .arrow-section{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    height: 100%;
+    z-index: 1;
+  }
+  .arrow-section img{
+    transform: rotate(180deg);
+    cursor: pointer !important;
+  }

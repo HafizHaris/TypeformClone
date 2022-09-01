@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 <body>
 
@@ -81,8 +82,42 @@
           </div>
         </div>
 
+        
+        <!-- design slider -->
+        <div class="d-flex justify-content-center align-items-center flex-column text-center mt-5 pt-5 mb-5 pb-4">
+          <div class="text-section">
+          <h6 class="mb-4">DESIGNED TO IMPRESS</h6>
+          <p>Built-in photo and video libraries bring questions to life. Custom layouts and themes show your brand at its best. A sleek interface ties it all together.</p>
+          </div>
+        </div>
 
-        <div class="d-flex justify-content-center align-items-center flex-column text-center mt-5">
+        <!-- slider -->
+        <div class="design-section mb-5 pb-5" style="position: relative;">
+          <div class="owl-carousel owl-carousel-design-section owl-theme">
+            <div>
+              <div class="image-section">
+                <img class="card-img-top" src="assets/images/design-carousel1.jpg" alt="">
+              </div>
+            </div>
+            <div>
+              <div class="image-section">
+              <img class="card-img-top" src="assets/images/design-carousel2.jpg" alt="">
+            </div>
+            </div>
+            <div>
+              <div class="image-section">
+              <img class="card-img-top" src="assets/images/design-carousel3.jpg" alt="">
+            </div>
+            </div>
+            </div>
+            <div id="arrow-section" class="arrow-section">
+            <img src="https://www.typeform.com/static/home-page/arrow.svg?inline" alt="" onclick="DesignArrowClick()">
+          </div>
+        </div>
+        <!-- end design slider -->
+
+
+        <div class="d-flex justify-content-center align-items-center flex-column text-center mt-5 pt-5">
           <div class="text-section">
           <h6 class="mb-4">BUILT WITH BRAINS</h6>
           <p>Conditional logic lets you ask the right follow-up questions and skip the rest. Surveys feel less like interrogations, and more like conversations.</p>
@@ -158,6 +193,84 @@
       </div>
     </section>
 
+
+
+
+
+
+    <!-- testimonials -->
+    <section class="testimonial-section section-padding mb-5">
+      <div class="d-flex justify-content-center align-items-center">
+      <div class="text-section">
+        <h2>Here's what people say about us</h2>
+      </div>
+      </div>
+      <div class="owl-carousel owl-carousel1 owl-theme">
+        <div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5>"From builders are as old as the web, but Typeform elevates the medium substantially."</h5>
+              <img class="card-img-top" src="https://www.typeform.com/static/images/home-page/testimonials/avatar-johnny-rodgers-slack@3x.jpg" alt="">
+              <p class="card-text font-weight-normal">Johnny Rodgers <br>
+                <span>Product Architect</span>
+              </p>
+              <img src="https://www.typeform.com/static/images/home-page/testimonials/logo-slack@3x.png" alt="" class="brand-logo">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5>"From builders are as old as the web, but Typeform elevates the medium substantially."</h5>
+              <img class="card-img-top" src="https://www.typeform.com/static/images/home-page/testimonials/avatar-deanna-mcintosh-affinity-group@3x.jpg" alt="">
+              <p class="card-text font-weight-normal">Johnny Rodgers <br>
+                <span>Product Architect</span>
+              </p>
+              <img src="https://www.typeform.com/static/images/home-page/testimonials/logo-affinity-group@3x.png" alt="" class="brand-logo">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5>"From builders are as old as the web, but Typeform elevates the medium substantially."</h5>
+              <img class="card-img-top" src="https://www.typeform.com/static/images/home-page/testimonials/avatar-ellen-ronalds-keene-self-care-for-teachers@3x.jpg" alt="">
+              <p class="card-text font-weight-normal">Johnny Rodgers <br>
+                <span>Product Architect</span>
+              </p>
+              <img src="https://www.typeform.com/static/images/home-page/testimonials/logo-self-care-for-teachers@3x.png" alt="" class="brand-logo">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5>"From builders are as old as the web, but Typeform elevates the medium substantially."</h5>
+              <img class="card-img-top" src="https://www.typeform.com/static/images/home-page/testimonials/avatar-cara-harshman-amplitude@3x.jpg" alt="">
+              <p class="card-text font-weight-normal">Johnny Rodgers <br>
+                <span>Product Architect</span>
+              </p>
+              <img src="https://www.typeform.com/static/images/home-page/testimonials/logo-amplitude@3x.png" alt="" class="brand-logo">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card text-center">
+            <div class="card-body">
+              <h5>"From builders are as old as the web, but Typeform elevates the medium substantially."</h5>
+              <img class="card-img-top" src="https://www.typeform.com/static/images/home-page/testimonials/avatar-kyle-maltz-dollar-flight-club@3x.jpg" alt="">
+              <p class="card-text font-weight-normal">Johnny Rodgers <br>
+                <span>Product Architect</span>
+              </p>
+              <img src="https://www.typeform.com/static/images/home-page/testimonials/logo-dollar-flight-club@3x.png" alt="" class="brand-logo">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+
     <section class="lightskin section-padding d-flex justify-content-center align-items-center flex-column text-center static-text-section">
       <div class="text-section">
         <h2>How you ask is everything.</h2>
@@ -221,6 +334,7 @@
             <a href="#">News</a>
             <a href="#">Terms & conditions</a>
             <a href="#">Typeform (es)</a>
+            
           </div>
           <div class="col-md-1"></div>
         </div>
@@ -228,16 +342,16 @@
       <hr style="border-top:0.2px solid grey; margin-top:80px">
       <div class="container pb-4 pt-2">
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3 mt-1">
           <span><i class="fa-solid fa-location-dot mr-1"></i> Developed with love, from Pakistan</span>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-6 mt-1">
           <span><i class="fa-solid fa-earth-americas mr-1"></i> English</span>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 col-6 mt-1">
           <span><a href="#">Cookie Setting</a></span>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 mt-1">
           <span>© Typeform</span>
         </div>
       </div>
@@ -252,8 +366,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/main.js"></script>
-    
-    
 </body>
 </html>
