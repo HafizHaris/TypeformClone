@@ -181,7 +181,11 @@ footer a:hover{
         text-align: center;
     }
 }
-
+@media screen and (min-width:1681px){
+    .overlay-text{
+        top:390px
+    }
+}
 @media screen and (min-width:1201px) and (max-width:1600px){
     .overlay-text{
         top:262px;
