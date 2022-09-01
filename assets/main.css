@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
+:root{
+    --dark: rgb(38, 38, 39);
+    --darkhover: rgb(71, 71, 71);
+    --lightskin: #FCFAF9;
+    --darkskin: #F6F1EA;
+}
 *{
     font-family: 'Lato', sans-serif;
-    font-weight: lighter;
+    font-weight: lighter !important;
 }
 body{
     color: rgb(38, 38, 39);
 }
-
 .hero-section{
     position: relative;
 }
@@ -28,15 +33,14 @@ body{
     bottom:0;
     right:0;
 }
-
 .btn-dark{
-    background-color: rgb(38, 38, 39) !important;
+    background-color:  var(--dark) !important;
     padding: 12px 24px;
     font-size: 16px;
     color:white;
 }
 .btn-dark:hover{
-    background-color: rgb(71, 71, 71) !important;
+    background-color: var(--darkhover) !important;
     transition: all 0.2s ease 0s;
 }
 .navbar-nav li a:hover{
@@ -50,7 +54,7 @@ body{
 }
 .txt-underline{
     cursor: pointer;
-    text-decoration: underline 3px;
+    text-decoration: underline 2px;
     text-underline-offset: 3px;
     color:black;
     font-weight: inherit;
@@ -59,9 +63,13 @@ body{
     color:rgb(71, 71, 71);
 }
 .section-heading{
-    font-size:48px; text-align: center;
+    font-size:44px; 
+    text-align: center;
+    line-height: 58px;
 }
-
+.section-padding{
+    padding: 90px 0px;
+}
 .navbar-nav li a{
     color:black !important;
     font-weight: normal;
@@ -78,7 +86,49 @@ body{
 .fa.fa-bars{
     font-size: 22px;
 }
+i{
+    font-family: var(--fa-style-family,"Font Awesome 6 Free") !important;
+    font-weight: var(--fa-style,900) !important;
+}
+.lightskin{
+    background: var(--lightskin);
+}
+.darkskin{
+    background: var(--darkskin);
+}
+.signup-section .text-section, .static-text-section .text-section{
+    max-width: 522px;
+}
+.static-text-section .text-section h2{
+    font-size: 45px;
+    font-weight: normal !important;
+}
 
+.signup-section .text-section h6{
+    font-weight: bold !important;
+}
+.signup-section .text-section p{
+    font-size: 24px; line-height: 34px;
+}
+.signup-section .video-section{
+    max-width: 850px;
+}
+.result-section h3, .integration-section h3{
+    font-size: 48px;
+}
+.result-section p,  .integration-section p,  .integration-section a{
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+.integration-section p{
+    line-height: 28px;
+}
+.result-section p span{
+    margin-right: 20px;
+}
+.result-section .text-section{
+    height: 100%;
+}
 @media screen and (max-width:1200px){
     .overlay-text {
         top:230px;
@@ -117,4 +167,134 @@ body{
         display: flex;
         flex-direction: column;
     }
+    .hero-section h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .overlay-text{
+        top: 102px;
+    }
+    .hero-section p{
+        font-size:21px;
+        line-height: 31px;
+    }
+}
+@media screen and (min-width:990px) and (max-width:1065px){
+    .overlay-text{
+        top:171px;
+    }
+    .hero-section h1{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width:480px){
+    .overlay-text span{
+        display: none;
+    }
+    .overlay-text h1{
+        font-size: 33px;
+        line-height: 41px;
+        margin-bottom: 14px !important;
+    }
+    .overlay-text p{
+        font-size: 20px;
+        line-height: 24px;    
+    }
+    .overlay-text {
+        top:50px;
+        padding: 0% 9%;
+    }
+    .overlay-text .btn-dark{
+        width: 100%;
+        padding: 9px 24px;
+    }
+    .section-heading{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .section-padding{
+        padding: 50px 26px;
+    }
+}
+@media screen and (min-width:480px) and (max-width:1065px){
+    .section-heading{
+    font-size: 38px;
+    line-height: 50px;
+    }
+}
+@media screen and (max-width:720px){
+    .signup-section .text-section{
+        text-align: left;
+    }
+    .signup-section .text-section h6{
+        font-size: 13px;
+    }
+    .signup-section .text-section p{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .signup-section{
+        padding-top: 160px !important;
+    }
+    .static-text-section .text-section h2{
+        font-size: 30px;
+    }
+    .result-section h3{
+        font-size: 24px;
+        font-weight: normal !important;
+        margin-top: 20px;
+    }
+    .integration-section h3{
+        font-size: 30px;
+        font-weight: normal !important;
+        margin-top: 20px;
+        line-height: 38px;
+    }
+    .integration-section p, .integration-section a{
+        font-size: 20px;
+    }
+    .integration-section .image-section{
+        margin-top: 75px;
+    }
+    .result-section p{
+        font-size: 17px;
+    }
+    .result-section .text-section{
+        margin-bottom: 50px;
+    }
+    
+}
+.image-section{
+    display: flex;
+    justify-content: center;
+}
+footer{
+    padding-top: 70px;
+    background-color: var(--dark);
+
+}
+footer *{
+    color:white;
+}
+footer h3{
+    font-size:16px;
+    line-height: 24px;
+    font-weight: normal !important;
+    margin-bottom: 20px;;
+    font-weight: normal !important;
+}
+footer a{
+    display: block;
+    margin-bottom: 10px;
+}
+footer span{
+    font-size:14px;
+}
+footer a{
+    transition: all 0.2s ease 0s;
+}
+footer a:hover{
+    text-decoration: none;
+    color: white;
+    margin-left:8px;
 }
