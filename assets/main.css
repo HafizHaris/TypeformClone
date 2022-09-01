@@ -316,6 +316,23 @@ footer a:hover{
     footer h3{
         margin-top: 50px;
     }
+    .story-arrow{
+        display: none;
+    }
+    .story-section h3{
+        margin-top: 50px;
+        font-size: 19px !important;
+    }
+    .story-section p{
+       font-size:32px !important;
+       line-height: 38px !important;
+    }
+    .story-section a{
+        margin-bottom: 10px;
+     }
+     .story-section .col-md-5 img{
+        margin-top:25px;
+     }
     
 }
 
