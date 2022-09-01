@@ -101,7 +101,7 @@ i{
 }
 .static-text-section .text-section h2{
     font-size: 45px;
-    font-weight: normal !important;
+    /* font-weight: normal !important; */
 }
 .testimonial-section .text-section{
     max-width: 420px;
@@ -441,4 +441,35 @@ footer a:hover{
   .arrow-section img{
     transform: rotate(180deg);
     cursor: pointer !important;
+  }
+  .story-section .story1{
+    background-color: #95CED7;
+  }
+  .story-section .story2{
+    background-color: #FCBEB4;
+  }
+  .story-section h3{
+    font-size: 23px;
+  }
+  .story-section span{
+    font-weight: normal !important;
+  }
+  .story-section p{
+    font-size:52px; 
+    line-height:52px; 
+    margin-top:50px; 
+    margin-bottom:60px;
+  }
+  .story-section a{
+    color:var(--dark);
+  }
+  .story-arrow{
+    position: absolute;
+    top: 48%;
+    right: -4% !important;
+    height: 100%;
+    z-index: 1;
+  }
+  .story-arrow img{
+    cursor: pointer;
   }

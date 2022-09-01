@@ -55,11 +55,11 @@ const UpdateVideo = () => {
             nav: false
           },
           680: {
-            items: 2,
+            items: 3,
             nav: false,
             loop: false
           },
-          1000: {
+          1350: {
             items: 5,
             nav: true
           }
