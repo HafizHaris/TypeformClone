@@ -6,6 +6,9 @@
     --lightskin: #FCFAF9;
     --darkskin: #F6F1EA;
     --yellow: #F3CD59;
+    --sharebg1: #0142AC;
+    --sharebg2: #9F5B34;
+    --sharebg3: #FBC3B9;
 }
 *{
     font-family: 'Lato', sans-serif;
@@ -120,7 +123,7 @@ i{
 .signup-section .video-section{
     max-width: 850px;
 }
-.result-section h3, .integration-section h3{
+.result-section h3, .integration-section h3, .create-section h3{
     font-size: 48px;
 }
 .result-section p,  .integration-section p,  .integration-section a{
@@ -130,7 +133,7 @@ i{
 .integration-section p{
     line-height: 28px;
 }
-.result-section p span{
+.result-section p span, .create-section p span{
     margin-right: 20px;
 }
 .result-section .text-section{
@@ -336,7 +339,40 @@ footer a:hover{
     padding-top: 60px;
     padding-bottom: 50px;
 }
-
+.create-section h2, .create-section h3{
+    font-size: 48px;
+    line-height: 56px;
+}
+.create-section p{
+    font-size: 24px;
+    margin-bottom:0px;
+}
+.create-section a{
+    color: var(--dark);
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.owl-carousel-create-section .image-section{
+    padding: 10px;
+}
+.owl-carousel-create-section .owl-nav{
+    position: absolute;
+    right: 364px;
+}
+.owl-carousel-create-section .owl-nav button{
+    font-size: 32px !important;
+}
+.owl-carousel-create-section .owl-nav .owl-prev{
+    margin-right: 25px;
+}
+.owl-carousel-create-section .owl-nav .disabled{
+    color:grey !important;
+    cursor: not-allowed !important;
+}
+.share-section{
+    color:white;
+}
 @media screen and (max-width:1200px){
     .overlay-text {
         top:230px;
@@ -505,7 +541,7 @@ footer a:hover{
         font-size: 30px ;
         font-weight: normal !important;
     }
-    .result-section h3{
+    .result-section h3, .create-section h3{
         font-size: 24px;
         font-weight: normal !important;
         margin-top: 20px;
@@ -522,7 +558,7 @@ footer a:hover{
     .integration-section .image-section{
         margin-top: 75px;
     }
-    .result-section p{
+    .result-section p, .create-section p{
         font-size: 17px;
     }
     .result-section .text-section{
@@ -590,5 +626,15 @@ footer a:hover{
      }
      .story-img{
         height: unset;
+     }
+     .create-section h2{
+        font-size: 30px;
+        font-weight: normal !important;
+     }
+     .create-section h3{
+        margin:0px !important;
+     }
+     .create-section a{
+        font-size: 14px;
      }
 }

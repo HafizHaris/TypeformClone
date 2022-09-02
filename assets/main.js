@@ -106,6 +106,42 @@ const UpdateVideo = () => {
       design_carousels();
     })(jQuery);
   })();
+
+
+  (function () {
+    "use strict";
+  
+    var design_carousels = function () {
+      $(".owl-carousel-create-section").owlCarousel({
+        loop: false,
+        // center: true,
+        margin: 0,
+        responsiveClass: true,
+        smartSpeed: 600,
+        ltl: true,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          680: {
+            items: 2,
+            nav: false,
+            loop: false
+          },
+          1000: {
+            items: 4,
+            nav: true
+          }
+        }
+      });
+    };
+  
+    (function ($) {
+      design_carousels();
+    })(jQuery);
+  })();
   
   function DesignArrowClick(){
     document.querySelector('.owl-next').click();
@@ -118,3 +154,49 @@ const UpdateVideo = () => {
     $(`#story${story}`).fadeOut(0);
     $(`#story${NextStory}`).fadeIn(750);
   }
+
+
+  // dynamic carousel
+  let CurrentSlide = 1;
+  const RootElement = document.querySelector(':root');
+  const RootStyle = getComputedStyle(RootElement);
+  const MainImage = document.querySelector('.share-section .col-md-5 img');
+  const FloatingImage = document.querySelector('.share-section .col-md-7 img');
+  const MainBg = document.querySelector('.share-section .container-fluid');
+  const MainSection = document.querySelector('.share-section');
+  
+  $('.owl-carousel-create-section .owl-nav .owl-next').click(function() {
+    if(CurrentSlide!=3){
+    if(CurrentSlide==1){
+        MainImage.src = "https://www.typeform.com/static/images/home-page/share-section/bg-email@1x.webp";
+        FloatingImage.src = "https://www.typeform.com/static/images/home-page/share-section/example-email-en@1x.webp";
+        MainBg.style.backgroundColor = RootStyle.getPropertyValue('--sharebg2');
+        MainSection.style.color = "white";
+    }else if(CurrentSlide==2){
+        MainImage.src = "assets/images/bg-share3.jpg";
+        FloatingImage.src = "https://www.typeform.com/static/images/home-page/share-section/example-share-en@1x.webp";
+        MainBg.style.backgroundColor = RootStyle.getPropertyValue('--sharebg3');
+        MainSection.style.color = RootStyle.getPropertyValue('--dark');
+    }
+    CurrentSlide++;
+    }
+  });
+
+
+  $('.owl-carousel-create-section .owl-nav .owl-prev').click(function() {
+    if(CurrentSlide!=1){
+    if(CurrentSlide==2){
+        MainImage.src = "https://www.typeform.com/static/images/home-page/share-section/bg-embed@1x.webp";
+        FloatingImage.src = "https://www.typeform.com/static/images/home-page/share-section/example-embed-en@1x.webp";
+        MainBg.style.backgroundColor = RootStyle.getPropertyValue('--sharebg1');
+        MainSection.style.color = "white";
+    }else if(CurrentSlide==3){
+        MainImage.src = "https://www.typeform.com/static/images/home-page/share-section/bg-email@1x.webp";
+        FloatingImage.src = "https://www.typeform.com/static/images/home-page/share-section/example-email-en@1x.webp";
+        MainBg.style.backgroundColor = RootStyle.getPropertyValue('--sharebg2');
+        MainSection.style.color = "white";
+    }
+    CurrentSlide--;
+    }
+  });
+  
