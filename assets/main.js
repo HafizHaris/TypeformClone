@@ -82,6 +82,7 @@ const UpdateVideo = () => {
         center: true,
         margin: 0,
         responsiveClass: true,
+        smartSpeed: 600,
         nav: true,
         responsive: {
           0: {
@@ -109,4 +110,11 @@ const UpdateVideo = () => {
   function DesignArrowClick(){
     document.querySelector('.owl-next').click();
     document.getElementById('arrow-section').style.display = "none";
+  }
+
+  function NextStory(story){
+    let NextStory = 2 ;
+    if(story==2) NextStory = 1;
+    $(`#story${story}`).fadeOut(0);
+    $(`#story${NextStory}`).fadeIn(750);
   }
