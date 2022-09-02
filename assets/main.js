@@ -55,7 +55,7 @@ const UpdateVideo = () => {
             nav: false
           },
           680: {
-            items: 3,
+            items: 2,
             nav: false,
             loop: false
           },
@@ -123,11 +123,11 @@ const UpdateVideo = () => {
         responsive: {
           0: {
             items: 1,
-            nav: false
+            nav: true
           },
           680: {
             items: 2,
-            nav: false,
+            nav: true,
             loop: false
           },
           1000: {
@@ -161,7 +161,7 @@ const UpdateVideo = () => {
   const RootElement = document.querySelector(':root');
   const RootStyle = getComputedStyle(RootElement);
   const MainImage = document.querySelector('.share-section .col-md-5 img');
-  const FloatingImage = document.querySelector('.share-section .col-md-7 img');
+  const FloatingImage = document.querySelector('.share-section .col-xl-7 img');
   const MainBg = document.querySelector('.share-section .container-fluid');
   const MainSection = document.querySelector('.share-section');
   

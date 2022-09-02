@@ -123,17 +123,17 @@ i{
 .signup-section .video-section{
     max-width: 850px;
 }
-.result-section h3, .integration-section h3, .create-section h3{
+.result-section h3, .integration-section h3, .create-section h3, .share-section h3{
     font-size: 48px;
 }
-.result-section p,  .integration-section p,  .integration-section a{
+.result-section p,  .integration-section p,  .integration-section a, .share-section p{
     font-size: 24px;
     margin-bottom: 0px;
 }
 .integration-section p{
     line-height: 28px;
 }
-.result-section p span, .create-section p span{
+.result-section p span, .create-section p span, .share-section p span{
     margin-right: 20px;
 }
 .result-section .text-section{
@@ -373,7 +373,31 @@ footer a:hover{
 .share-section{
     color:white;
 }
+.share-section .col-xl-7 img{
+    width: 27%;
+}
 @media screen and (max-width:1200px){
+    .share-section .col-md-5{
+        display: none;
+     }
+     .share-section .col-xl-7{
+        height: 600px;
+        flex-direction: column-reverse !important;
+     }
+     .share-section{
+        margin-bottom:225px;
+     }
+     .share-section .col-xl-7 img{
+        position: static !important;
+        left:unset !important;
+        top: unset !important;
+        margin-bottom:-220px;
+        margin-top:45px;
+        width:272px !important;
+     }
+     .share-section .text-section{
+        margin-top: 100px;
+     }
     .overlay-text {
         top:230px;
     }
@@ -518,6 +542,8 @@ footer a:hover{
      .story-arrow{
         right: -15%;
      }
+
+     
      
 }
 @media screen and (max-width:720px){
@@ -541,7 +567,7 @@ footer a:hover{
         font-size: 30px ;
         font-weight: normal !important;
     }
-    .result-section h3, .create-section h3{
+    .result-section h3, .create-section h3, .share-section h3{
         font-size: 24px;
         font-weight: normal !important;
         margin-top: 20px;
@@ -558,10 +584,10 @@ footer a:hover{
     .integration-section .image-section{
         margin-top: 75px;
     }
-    .result-section p, .create-section p{
+    .result-section p, .create-section p, .share-section p{
         font-size: 17px;
     }
-    .result-section .text-section{
+    .result-section .text-section, .share-section .text-section{
         margin-bottom: 50px;
     }
     footer h3{
@@ -637,4 +663,11 @@ footer a:hover{
      .create-section a{
         font-size: 14px;
      }
+     .owl-item:has(> .blank-slide){
+        display: none;
+     }
+     .owl-carousel-create-section .owl-nav {
+        right: 12px;
+     }
+    
 }
