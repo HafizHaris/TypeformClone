@@ -15,15 +15,25 @@ body{
     width: 310px; 
     background-color:white; 
     border-right: 1px solid lightgrey;
-    height: 100vh;
+    height: calc(100vh - 50px);
+    position: relative;
 }
 .topnav{
     background: white; 
     border-bottom:1px solid lightgrey; 
-    height: 48px;
+    height: 50px;
 }
 .main{
     padding: 20px 40px;
+}
+.plans-btn{
+    background-color: rgb(2, 100, 81);
+    color: white;
+    padding:3px 9px;
+    font-size: 14px;;
+}
+.plans-btn:hover{
+    color:white;
 }
 .create-btn{
     background-color: var(--dark);
@@ -49,4 +59,91 @@ body{
 i.fa-ellipsis{
     color: gery;
     cursor: pointer;
+}
+.search-btn{
+    padding: 0px 10px;
+}
+.search-btn{
+    background-color: #F2F2F2;
+    color:grey;
+    font-size:14px;
+    padding:6px 4px;
+}
+.search-btn i{
+    font-size: 14px;
+}
+.search-btn:hover{
+    color: grey !important;
+}
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+.progress{
+    height: 4px;
+}
+.sidebar .bottom-section{
+    border-top:1px solid lightgrey; 
+    height: 245px; 
+    position: absolute; 
+    bottom:0px; 
+    width:100%;
+}
+.sidebar .bottom-section .user{
+    font-size:17px; 
+    font-weight:bolder;
+}
+.f-15{
+    font-size: 15px;
+}
+.f-13{
+    font-size: 13px;
+}
+.sidebar .bottom-section .limit-link{
+    color:rgb(2, 100, 81); 
+    font-size:15px;
+}
+.sidebar .app-section{
+    position: absolute; 
+    bottom:0px; 
+    padding:13px 16px; 
+    border-top:1px solid lightgrey; 
+    width:100%; 
+    display:flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.sidebar .app-section a{
+    font-size: 15px; 
+    color:black; 
+    font-weight: normal;
+}
+
+.sidebar .app-section i{
+    color:grey; 
+    font-size:14px;
+}
+.topnav .user{
+    width: 30px; 
+    height:30px; 
+    background-color: #5CD6C8; 
+    border-radius: 3px;
+}
+.topnav .user span{
+    color:white; 
+    font-weight:bold;
+}
+.topnav .user p{
+    font-weight: bold; 
+    font-size:15px; 
+    display: inline;
+}
+.topnav .user .divider{
+    border-right: 1px solid lightgrey; 
+    height: 30px;
+}
+.topnav .user img{
+    margin-top:-3px; 
+    width:40px; 
+    height:40px;
 }
