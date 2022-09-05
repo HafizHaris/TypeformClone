@@ -492,6 +492,11 @@ a:hover {
     text-decoration: unset !important;
 }
 
+footer hr{
+    border-top:0.2px solid grey; 
+    margin-top:80px
+}
+
 
 /* media queries */
 
