@@ -24,6 +24,13 @@ LoginPassword.onfocusout = LoginPassword.onkeyup = function() {
     ValidateField("login-password");
 };
 
+window.gapi.client
+        .init({
+          clientId:'434226071651-hafcjpqmp07tt5rjebs6maq1nhl5rm60.apps.googleusercontent.com',
+          scope: "haris.khan@techno-soft.com",
+          plugin_name:'Typeformclone'
+});
+
 // login with google
 function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
@@ -39,3 +46,4 @@ function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
   }
+
