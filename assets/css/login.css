@@ -19,7 +19,7 @@
     margin-top: 12px;
     font-weight: normal;
 }
-.login-box form input[type="text"]{
+.login-box form input{
     padding: 9px 12px;
     border-radius: 3px;
     width: 100%;
@@ -29,11 +29,11 @@
     margin-bottom:9px;
     border:1px solid var(--lightgrey);
 }
-.login-box form input[type="text"]:focus-visible, .login-box form input[type="text"]:hover{
+.login-box form input:focus-visible, .login-box form input:hover{
     outline:none;
     border:0.5px solid var(--dark);
 }
-.login-box form input[type="text"]::placeholder {
+.login-box form input::placeholder {
     color: var(--lightgrey);    
 }
 .login-box form a, .sm-a{
@@ -119,7 +119,8 @@
     text-decoration:underline;
 }
 .login-box h2{
-    font-size:20px; line-height:24px;
+    font-size:20px; 
+    line-height:24px;
     font-weight:normal;
     color:var(--grey);
 }
