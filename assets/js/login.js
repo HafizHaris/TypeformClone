@@ -42,7 +42,7 @@ function renderButton() {
 function onSuccess(googleUser) {
     // Get the Google profile data (basic)
     //var profile = googleUser.getBasicProfile();
-    
+    alert("success");
     // Retrieve the Google account data
     gapi.client.load('oauth2', 'v2', function () {
         var request = gapi.client.oauth2.userinfo.get({
@@ -63,6 +63,7 @@ function onSuccess(googleUser) {
 
 // Sign-in failure callback
 function onFailure(error) {
+    alert("Error");
     alert(error);
 }
 
