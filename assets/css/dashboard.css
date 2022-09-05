@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+:root{
+    --dark: rgb(38, 38, 39);
+}
+*{
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    
+}
+
+body{
+    background-color: #FAFAFA;
+}
+.sidebar{
+    width: 310px; 
+    background-color:white; 
+    border-right: 1px solid lightgrey;
+    height: 100vh;
+}
+.topnav{
+    background: white; 
+    border-bottom:1px solid lightgrey; 
+    height: 48px;
+}
+.main{
+    padding: 20px 40px;
+}
+.create-btn{
+    background-color: var(--dark);
+    padding: 3px 10px 4px 10px;
+}
+.create-btn span{
+    margin-right: 7px;
+}
+.share-btn{
+    padding:3px 10px;
+    margin-bottom: 5px;
+    color:grey
+}
+.menu-btn{
+    padding: 3px 8px;
+    margin-bottom: 5px;
+}
+.share-btn i{
+    margin-right: 10px;
+    color: var(--dark);
+    font-size: 13px;
+}
+i.fa-ellipsis{
+    color: gery;
+    cursor: pointer;
+}
