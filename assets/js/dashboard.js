@@ -17,7 +17,7 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-function ToggleSidebar(){
+function toggleSidebar(){
 	const SidebarClassList = document.getElementById("sidebar").classList;
 	if (SidebarClassList.contains("open"))
 		SidebarClassList.remove("open");
