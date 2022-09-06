@@ -66,7 +66,7 @@ i.fa-ellipsis{
 .search-btn{
     background-color: #F2F2F2;
     color:grey;
-    font-size:14px;
+    font-size:13px;
     padding:6px 4px;
 }
 .search-btn i{
@@ -146,4 +146,220 @@ i.fa-ellipsis{
     margin-top:-3px; 
     width:40px; 
     height:40px;
+}
+.sidebar ul li{
+    list-style: none;
+    padding: 10px 20px;
+    font-weight: normal;
+    font-size:14px;
+    background:#F0F0F0;
+}
+.sidebar ul{
+    padding: 0px;
+}
+.sidebar ul li span{
+    float: right;
+    font-size:13px;
+    font-weight: normal;
+}
+.sidebar-ul-header{
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: normal;
+    color:grey;
+    cursor: pointer;
+}
+.sidebar-ul-header i{
+    margin-right:7px;
+    font-size: 12px;
+}
+.sidebar-ul-header button{
+    background-color: #F0F0F0;
+    padding: 1px 11px;
+    font-size: 18px;
+    float: right;
+    margin-top: -10px;
+    font-weight: normal;
+}
+
+
+
+
+
+.select-dropdown {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    font-weight: bold;
+  }
+  .select-dropdown__button {
+    padding: 4px 10px 6px 11px;
+    background-color: #E3E3E3;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal !important;
+    color: var(--dark)
+  }
+  .select-dropdown__button::focus {
+    outline: none;
+    border: none;
+  }
+  .select-dropdown__button .zmdi-chevron-down {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+  }
+  .select-dropdown__list {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: top left;
+    transform: scale(1, 0);
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    border:1px solid lightgrey;
+  }
+  .select-dropdown__button i{
+    margin-left:8px;    
+    font-size: 12px;
+  }
+  .select-dropdown__button span{
+    font-weight: normal;
+  }
+  .select-dropdown__button:focus{
+    outline: none !important;
+}
+.select-dropdown__list.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1, 1);
+}
+.select-dropdown__list-item {
+    display: block;
+    list-style-type: none;
+    padding: 6px 15px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+    color: #616161;
+    transition: all ease-in-out 0.3s;
+    font-weight: normal;
+}
+.select-dropdown__list-item:hover{
+    background:#E3E3E3;
+}
+#btnContainer{
+    float:right;
+}
+#btnContainer .btn {
+    border: none;
+    outline: none;
+    background-color: #E3E3E3;
+    cursor: pointer;
+    font-size:14px;
+    padding: 5px 15px;
+}
+#btnContainer .btn i{
+    margin-right: 10px;
+}
+#btnContainer .grid {
+    border-radius: 4px 0px 0px 4px;
+} 
+#btnContainer .list {
+    border-radius: 0px 4px 4px 0px;
+    margin-left: -4px;
+} 
+#btnContainer .btn:hover {
+    background-color: #ddd;
+  }
+  
+#btnContainer .btn.active {
+    background-color: #666;
+    color: white;
+}
+.main .head{
+    width: 100%; 
+    border-bottom: 1px solid lightgrey; 
+    padding-bottom:20px;
+}
+.mobile-nav{
+    background-color: white; 
+    border-bottom:1px solid lightgrey; 
+    height: 50px;
+    display: none;
+}
+.mobile-nav p{
+    font-weight: normal;
+}
+.mobile-nav .right *{
+    color:grey;
+}
+.topnav .separator{
+    border-right: 1px solid lightgrey; 
+    height: 30px;
+}
+.topnav .name{
+    font-weight: bold; 
+    font-size:15px; 
+    display: inline;
+}
+.topnav .name-icon{
+    margin-top:-3px; 
+    width:40px; 
+    height:40px;
+}
+.welcome-section {
+    height:70vh;
+}
+.welcome-section .content-container{
+    text-align: center; 
+    max-width:400px
+}
+.welcome-section .content-container p{
+    font-weight: normal; 
+    color:grey;
+}
+.main .head .share{
+    border-left:1px solid lightgrey; 
+    margin-left: 20px;
+}
+.open{
+    display: block !important;
+}
+.open + .main{
+    opacity: 0.5;
+}
+@media screen and (max-width:1024px){
+    .sidebar, #btnContainer{
+        display: none;
+    }
+    .mobile-nav{
+        display: flex;
+    }
+    .select-dropdown__button{
+        font-size:12px;
+    }
+    .main .head .create-btn{
+        font-size: 13px;
+    }
+    .main {
+        padding: 20px 25px;
+    }
+    .sidebar{
+        position: absolute;
+        z-index: 1;
+        height: calc(100vh - 100px);
+    }
 }
