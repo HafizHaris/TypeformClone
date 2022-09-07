@@ -17,12 +17,26 @@ body {
     background-color: var(--lightergrey);
 }
 
-.sidebar {
+.sidebar,
+.right-sidebar {
     width: 19rem;
     background-color: white;
     border-right: 0.1rem solid lightgrey;
     height: calc(100vh - 3.1rem);
     position: relative;
+}
+
+.sidebar.createform,
+.right-sidebar {
+    width: 24rem;
+    border-left: 0.1rem solid lightgrey;
+}
+
+.main .slide {
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2)0rem 0.5rem 1.5rem;
+    height: 70vh;
+    border-radius: 0.5rem;
 }
 
 .topnav {
@@ -40,6 +54,10 @@ body {
     color: white;
     padding: 0.2rem 0.5rem;
     font-size: 0.9rem;
+}
+
+.btn-dark {
+    background-color: var(--dark);
 }
 
 .plans-btn:hover {
@@ -106,11 +124,16 @@ i.fa-ellipsis {
 }
 
 .sidebar .bottom-section {
+    background-color: white;
     border-top: 0.1rem solid lightgrey;
     height: 15rem;
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+.slides-list{
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 .sidebar .bottom-section .user {
@@ -134,7 +157,7 @@ i.fa-ellipsis {
     position: absolute;
     bottom: 0;
     padding: 1rem 1.1rem;
-    border-top: 1px solid lightgrey;
+    border-top: 0.1rem solid lightgrey;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -184,9 +207,13 @@ i.fa-ellipsis {
     font-size: 0.9rem;
     background: #F0F0F0;
 }
+.edit-question ul li{
+    background-color: white;
+    padding: 0.4rem 0.9rem;
+}
 
 .sidebar ul {
-    padding: 0px;
+    padding:0rem;
 }
 
 .sidebar ul li span {
@@ -263,12 +290,12 @@ i.fa-ellipsis {
     transform: scale(1, 0);
     transition: all ease-in-out 0.3s;
     z-index: 2;
-    border: 1px solid lightgrey;
+    border: 0.1rem solid lightgrey;
 }
 
 .select-dropdown__button i {
-    margin-left: 8px;
-    font-size: 12px;
+    margin-left: 0.5rem;
+    font-size: 0.75rem;
 }
 
 .select-dropdown__button span {
@@ -288,7 +315,7 @@ i.fa-ellipsis {
 .select-dropdown__list-item {
     display: block;
     list-style-type: none;
-    padding: 6px 15px;
+    padding: 0.38rem 0.94rem;
     background: rgb(255, 255, 255);
     font-size: 0.9rem;
     line-height: 1.4;
@@ -300,6 +327,33 @@ i.fa-ellipsis {
 
 .select-dropdown__list-item:hover {
     background: var(--darkergrey);
+}
+
+.btn-grey {
+    background-color: rgb(240, 240, 240);
+}
+
+.icon-btn {
+    width: 2.2rem;
+    padding: 0rem;
+}
+
+.icon-btn i {
+    color: var(--dark);
+    font-size: 0.9rem;
+}
+
+.nav-btn button {
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: grey;
+    padding: 1rem 0.4rem 0.7rem 0.4rem;
+    border-radius: 0rem;
+}
+
+.nav-btn .active {
+    border-bottom: 0.18rem solid var(--dark);
+    color: black;
 }
 
 #btnContainer {
@@ -389,6 +443,10 @@ i.fa-ellipsis {
     color: grey;
 }
 
+.welcome-section{
+    display: none;
+}
+
 .main .head .share {
     border-left: 0.1rem solid lightgrey;
     margin-left: 1.2rem;
@@ -400,6 +458,9 @@ i.fa-ellipsis {
 
 .open+.main {
     opacity: 0.5;
+}
+.createform+.main{
+    opacity: 1;
 }
 
 a:hover {
@@ -425,7 +486,7 @@ a:hover {
 
 [tooltip]::before {
     content: "";
-    border: 5px solid transparent;
+    border: 0.31rem solid transparent;
     z-index: 1001;
 }
 
@@ -551,15 +612,252 @@ a:hover {
     font-size: 110%;
 }
 
+a,
+a:hover {
+    color: var(--dark);
+}
+
+.workplace {
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.grey {
+    color: grey;
+}
+
+.workplace * {
+    font-weight: normal;
+}
+
+.sidebar.createform .sidebar-ul-header p {
+    font-weight: bold;
+    color: black;
+}
+
+.sidebar.createform .sidebar-ul-header button {
+    margin-top: -0.3rem;
+}
+
+.slides-list li .icon {
+    float: unset !important;
+    background-color: #379CFB;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.44rem;
+    max-height: 1.57;
+    width: 3.13rem;
+    font-size: 0.82rem;
+}
+
+.slides-list li .icon i {
+    font-size: 0.75rem;
+}
+
+.slides-list li .icon span {
+    font-weight: normal;
+    font-size: 0.82rem;
+}
+
+.slides-list li p {
+    font-weight: normal;
+    font-size: 0.77rem;
+}
+
+.slides-list li {
+    background-color: white !important;
+    cursor: pointer;
+}
+
+.slides-list li.active {
+    background: #F0F0F0 !important;
+}
+
+.slides-list .slide-name {
+    max-width: 9.25rem;
+}
+
+#settings span {
+    font-size: 0.82rem;
+    font-weight: normal;
+
+}
+
+input[type=checkbox],
+input[type=radio] {
+    --active: rgb(4, 135, 175);
+    --active-inner: #fff;
+    --input-border: #CDD9ED;
+    --shadow-inner: rgba(18, 22, 33, .1);
+    outline: none;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    cursor: pointer;
+    height: 1.125rem;
+    border: 0.1rem solid var(--input-border);
+    background: var(--background);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+input[type=checkbox]:after,
+input[type=radio]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.2s ease, filter 0.3s ease;
+}
+
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+    background: var(--active);
+    border-color: var(--active);
+}
+
+input[type=checkbox]:checked:after,
+input[type=radio]:checked:after {
+    filter: drop-shadow(0 0.1rem 0.1rem var(--shadow-inner));
+    transition: opacity 0.3s ease, filter 0.3s ease, transform 0.6s cubic-bezier(0.175, 0.88, 0.32, 1.2);
+}
+
+input[type=checkbox].switch {
+    width: 2.18rem;
+    border-radius: 0.69rem;
+}
+
+input[type=checkbox].switch:after {
+    left: 0.1rem;
+    top: 0.1rem;
+    border-radius: 50%;
+    width: 0.82rem;
+    height: 0.82rem;
+    background: var(--input-border);
+}
+
+input[type=checkbox].switch:checked:after {
+    background: var(--active-inner);
+    transform: translateX(1rem);
+}
+
+input[type=checkbox].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+}
+
+input[type=radio] {
+    border-radius: 50%;
+}
+
+input[type=radio]:after {
+    width: 1.188rem;
+    height: 1.188rem;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+input[type=radio]:checked:after {
+    background: var(--active-inner);
+    transform: scale(0.5);
+}
+
+.right-sidebar .head{
+    border-bottom: 0.1rem solid lightgrey;
+}
+
+.right-sidebar .edit-question{
+    border-bottom: 0.1rem solid lightgrey;
+}
+
+.right-sidebar .edit-question button{
+    background: white; 
+    border: 0.1rem solid lightgray;
+}
+
+.right-sidebar .edit-question button i{
+    margin-top: 4.96rem;
+}
+
+.right-sidebar .settings-section{
+    border-bottom: 0.1rem solid lightgrey;
+}
+.f-normal{
+    font-weight: normal;
+}
+.f-bold{
+    font-weight: bold;
+}
+.right-sidebar .add-image button{
+    font-size: 0.75rem; 
+    padding: 0.2rem 0.625rem;
+}
+.question-popup{
+    background-color: white; 
+    border:0.1rem solid lightgrey; 
+    border-radius: 0.3126rem; 
+    width: 62.5rem; 
+    height:31.25rem; 
+    position:absolute; 
+    left:15rem; 
+    top:1.25rem; 
+    z-index:1;
+    overflow-y: scroll;
+    display: none;
+}
+.question-popup.open{
+    display: block;
+}
+.question-popup p, .question-popup h5{
+    margin-left: 0.75rem;
+}
+.question-popup ul li{
+    background-color: white;
+    cursor: pointer;
+    padding:0.3125rem 0.625rem !important;
+}
+.question-popup ul li:hover{
+    background-color: var(--inputElementsBgColor);
+}
+
+.form-card{
+    height: 10.625rem; 
+    width:100%; 
+    background-color: white; 
+    border:0.1rem solid lightgrey; 
+    border-radius: 0.31rem;
+}
+.slide{
+    text-align: center;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+}
+@media screen and (max-width:1255px) {
+    .question-popup{
+        top: 0;
+        left: 0;
+        width: calc(100vw - 0.2rem);
+        height: calc(100vh - 6.2rem);
+        z-index: 10000;
+    }
+}
 @media screen and (max-width:1024px) {
 
     .sidebar,
     #btnContainer {
         display: none;
     }
-
+    .sidebar.createform {
+        width: 17rem;
+    }
     .mobile-nav {
         display: flex;
+    }
+    .createformtop .workplace, .createformtop .name-icon, .createformtop .m-h, .createformtop .separator, .createformtop .icon-btn{
+        display: none !important;
     }
 
     .select-dropdown__button {
@@ -578,6 +876,16 @@ a:hover {
         position: absolute;
         z-index: 1;
         height: calc(100vh - 6.2rem);
+    }
+    .question-popup{
+        top: 0;
+        left: 0;
+        width: calc(100vw - 0.1rem);
+        height: calc(100vh - 6.2rem);
+        z-index: 10000;
+    }
+    .sidebar .bottom-section {
+        height: 8rem;
     }
 }
 
