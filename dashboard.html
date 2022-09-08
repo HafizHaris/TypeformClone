@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typeform: People-Friendly Forms and Surveys</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+
+  <div class="topnav p-2 pl-3 d-flex align-items justify-content-between">
+    <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center align-items-center user">
+        <span>H</span>
+      </div>
+      <p class="ml-3 mt-1 name">haris.khan</p>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <button class="btn plans-btn  d-inline">View plans</button>
+      <div class="d-inline mr-3 ml-4 separator"></div>
+      <img src="assets/images/User-icon.png" class="d-inline name-icon" alt="">
+    </div>
+  </div>
+
+  <div class="mobile-nav p-2 pl-3 pr-3  align-items-center justify-content-between">
+    <div>
+      <i class="fa fa-bars d-inline" onclick="toggleSidebar()"></i>
+      <p class="mb-0 d-inline ml-2">Workspaces</p>
+    </div>
+    <div class="right">
+      <i class="fa-regular fa-plus mr-2"></i>
+      <p class="mb-0 d-inline ml-2">
+        <i class="fa-solid fa-magnifying-glass mr-2 f-13"></i> Find
+      </p>
+    </div>
+  </div>
+
+  <div class="d-flex">
+    <!-- sidebar -->
+    <div id="sidebar" class="sidebar">
+      <div class="p-3">
+        <button class="btn w-100 search-btn">
+          <i class="fa-solid fa-magnifying-glass mr-2"></i> Find workspace or typeform
+        </button>
+      </div>
+      <div class="mt-2">
+        <div class="sidebar-ul-header">
+          <i class="fa-sharp fa-solid fa-caret-down"></i>
+          <i class="fa-solid fa-user"></i> <span tooltip="For your eyes only" flow="down">PRIVATE</span>
+          <button class="btn" tooltip="Create wrokspace" flow="down" data-toggle="modal" data-target="#createModal" >+</button>
+        </div>
+        <ul>
+          <li>My workspace <span>0</span></li>
+        </ul>
+      </div>
+
+      <!-- bottom section -->
+      <div class="bottom-section p-3">
+        <p class="mb-2 user"><b>Hafiz Haris Khan's</b> account</p>
+        <span class="f-15">Responses collected</span>
+        <div class="progress mt-1 mb-1">
+          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <span class="f-13"><b>0</b> / 10</span>
+        <span class="mt-2 d-block mb-2 f-13">Reset on Oct 5</span>
+        <a href="#" class="limit-link">Increase response limit</a>
+      </div>
+      <div class="app-section">
+        <a href=""><i class="fa-solid fa-boxes-stacked mr-2"></i> Apps & Integrations</a>
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <!-- end bottom section -->
+    </div>
+
+    <div class="main w-100">
+      <div class="head">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="d-inline">My workspace</h5>
+            <div class="d-inline share">
+              <button class="btn btn-light share-btn ml-2"><i class="fa-solid fa-user-plus"></i> Share</button>
+            </div>
+            <button class="btn btn-light ml-2 menu-btn"><i class="fa fa-ellipsis"></i></button>
+          </div>
+          <div class="col-6 mt-2">
+            <button class="btn btn-dark create-btn" data-toggle="modal" data-target="#createModal"><span>+</span> create typeform</button>
+          </div>
+          <div class="col-6">
+            <div class="d-flex justify-content-end align-items-end h-100">
+              <div class="select-dropdown mr-3">
+                <button href="#" role="button" data-value="" class="select-dropdown__button"><span>Date created</span>
+                  <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="select-dropdown__list">
+                  <li data-value="1" class="select-dropdown__list-item">Date created</li>
+                  <li data-value="2" class="select-dropdown__list-item">Last updated</li>
+                  <li data-value="3" class="select-dropdown__list-item">Alphabetical</li>
+                </ul>
+              </div>
+              <div id="btnContainer">
+                <button class="btn grid active"><i class="fa fa-th-large"></i> Grid</button>
+                <button class="btn list"><i class="fa fa-bars"></i> List</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4" id="froms-preview">
+        <div class="row" id="forms">
+        </div>
+      </div>
+      <div class="justify-content-center align-items-center flex-column w-100 welcome-section" id="welcome">
+        <div class="content-container">
+          <img src="assets/images/dashboard-img.png" width="120px" class="mb-3" alt="">
+          <h4>Come on in, Hafiz Haris</h4>
+          <p>Grab a hot cuppa (or cold brew) and get comfortable. It’s time to
+            create something special.</p>
+          <button class="btn btn-dark create-btn" data-toggle="modal" data-target="#createModal"><span>+</span> create typeform</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center  modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <h4 class="mt-3">Create a new typeform</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <a href="createform.html">
+                <div class="create-card">
+                  <img src="assets/images/create-card-1.png" alt="" class="w-100">
+                  <div class="content">
+                    <h5 class="mt-4">Start from scratch</h5>
+                    <p class="mb-4 mt-3">Jump right in and build something beautiful</p>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <a href="createform.html"></a>
+                <div class="create-card">
+                  <img src="assets/images/create-card-2.png" alt="" class="w-100">
+                  <div class="content">
+                    <h5 class="mt-4">Use a template</h5>
+                    <p class="mb-4 mt-3">Pick a premade typefrom and customize it as you please</p>
+                  </div>
+                </div>
+                </a>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <a href="createform.html">
+                <div class="create-card">
+                  <img src="assets/images/create-card-3.png" alt="" class="w-100">
+                  <div class="content">
+                    <h5 class="mt-4">Create it for me</h5>
+                    <p class="mb-4 mt-3">Tell us what you need and we will generate a typeform</p>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
