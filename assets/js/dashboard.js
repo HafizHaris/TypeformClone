@@ -49,6 +49,6 @@ $(document).ready(function() {
 	}
 
 	let username = window.localStorage.getItem('username');
-	if (useruser == null) username = "Guest";
+	if (username == null) username = "Guest";
 	alert(username);
 });
