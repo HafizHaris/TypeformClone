@@ -39,6 +39,19 @@ const appendForm = (form) => {
 	  $('#forms').append(formCard);
 }
 
+const getUserName = () => {
+	let Name = window.localStorage.getItem('username');
+	if (Name == null) Name = "Guest";
+	let userName = "";
+	if(Name.split(" ")[0] !== undefined){
+		userName = `${Name.split(" ")[0]}`;
+	}
+	if(Name.split(" ")[1] !== undefined){
+		userName = `${userName}.${Name.split(" ")[1]}`;
+	}
+	return userName.toLowerCase();
+}
+
 $(document).ready(function() {
 	let forms = JSON.parse(window.localStorage.getItem(`forms`));
 	if (forms != null) {
@@ -47,4 +60,6 @@ $(document).ready(function() {
 	  $("#forms-preview").css('display','none');
 	  $("#welcome").css('display','flex');
 	}
+	$("#username").text(getUserName());
+	$("#name-letter").text(getUserName()[0].toUpperCase());
 });
