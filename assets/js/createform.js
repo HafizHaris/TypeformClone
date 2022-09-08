@@ -1,14 +1,14 @@
 let formId = 0;
 const QuestionTypes = Object.freeze({
-    MultipleChoice : {name:"MultipleChoice", defaultTitle:"Multiple Choice - Select one from all", html: "<p>This is the content of Multiple choice.</p>"},
-    ShortText : {name:"ShortText", defaultTitle:"Short Text Title", html: "<p>This is the content of short text.</p>"},
-    LongText : {name:"LongText", defaultTitle:"Long Text Title is here", html: "<p>This is the content of long text. Looking interesting?</p>"},
-    Statement : {name:"Statement", defaultTitle:"Statement - Write statment", html: "<p>This is the content of Statement.</p>"},
-    YessNo : {name:"YessNo", defaultTitle:"Yess/No - select yess or no", html: "<p>This is the content of Yess/No.</p>"},
-    Email : {name:"Email", defaultTitle:"Email - Enter your email", html: "<p>This is the content of Email.</p>"},
-    PhoneNumber : {name:"PhoneNumber", defaultTitle:"Phone Number - Enter your number", html: "<p>This is the content of Phone Number.</p>"},
-    Website : {name:"Website", defaultTitle:"Website - Add your website", html: "<p>This is the content of Website.</p>"},
-    NumberWebsite : {name:"Number", defaultTitle:"Number - Add any number", html: "<p>This is the content of Number.</p>"}
+    MultipleChoice : {name:"MultipleChoice", defaultTitle:"Multiple Choice - Select one from all", html: '<div class="multiple-choice"><span>A</span>Opton A</div><div class="multiple-choice"><span>B</span>Opton B</div><div class="multiple-choice"><span>C</span>Opton C</div>'},
+    ShortText : {name:"ShortText", defaultTitle:"Short Text Title", html: '<input type="text" class="short-text" placeholder="Enter your answer in short text">'},
+    LongText : {name:"LongText", defaultTitle:"Long Text Title is here", html: '<textarea class="long-text" placeholder="Enter your answer in long text" rows="3"></textarea>'},
+    Statement : {name:"Statement", defaultTitle:"Statement - Write statment", html: '<h4 class="statement"><span>&#34;</span> Your question here. Recall information with @</h4>'},
+    YessNo : {name:"YessNo", defaultTitle:"Yess/No - select yess or no", html: '<div class="yess-no"><span>Y </span>Yess</div><div class="yess-no"><span>N</span>No</div>'},
+    Email : {name:"Email", defaultTitle:"Email - Enter your email", html: '<input type="email" class="short-text" placeholder="name@example.com">'},
+    PhoneNumber : {name:"PhoneNumber", defaultTitle:"Phone Number - Enter your number", html: '<input type="text" class="short-text" placeholder="(201 555-0123)">'},
+    Website : {name:"Website", defaultTitle:"Website - Add your website", html: '<input type="text" class="short-text" placeholder="https://example.com">'},
+    NumberWebsite : {name:"Number", defaultTitle:"Number - Add any number", html: '<input type="number" class="short-text" placeholder="Write Number">'}
 });
 
 const getQuestionTypeValues = (type) => {
@@ -48,13 +48,13 @@ const getQuestionTypeValues = (type) => {
 $('.select-dropdown__button').on('click', function(){
 	$('.select-dropdown__list').toggleClass('active');
 });
+
 $('.select-dropdown__list-item').on('click', function(){
-	var itemValue = $(this).data('value');
-	console.log(itemValue);
+	const itemValue = $(this).data('value');
 	$('.select-dropdown__button span').text($(this).text()).parent().attr('data-value', itemValue);
 	$('.select-dropdown__list').toggleClass('active');
 });
-function toggleSidebar(){
+const toggleSidebar = () => {
 	const SidebarClassList = document.getElementById("sidebar").classList;
 	if (SidebarClassList.contains("open"))
 		SidebarClassList.remove("open");
@@ -62,7 +62,7 @@ function toggleSidebar(){
 		SidebarClassList.add("open");
 }
 
-let generateId = () => {
+const generateId = () => {
     let s4 = () => {
         return Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
@@ -80,7 +80,7 @@ const toggleQuestionMenu = () => {
 }
 
 
-let addForm = () => {
+const addForm = () => {
     let forms = JSON.parse(window.localStorage.getItem("forms"));
     if(forms == null) forms=[];
     const id = generateId();
@@ -96,8 +96,6 @@ let addForm = () => {
     return id;
 }
 
-
-  
 const getForm = () => {
     let forms = JSON.parse(window.localStorage.getItem("forms"));
     return forms.filter(
@@ -136,7 +134,7 @@ const loadForm = (active = 1) => {
     toggleSidebar();
   }
 
-  function addQuestion(type){
+  const addQuestion = (type) => {
     const questionValues = getQuestionTypeValues(type);
     let forms = JSON.parse(window.localStorage.getItem(`forms`));
     forms.forEach(function(a){
@@ -145,13 +143,12 @@ const loadForm = (active = 1) => {
         }
     });
     
-    window.localStorage.setItem(`forms`, JSON.stringify(forms));
+    window.localStorage.setItem("forms", JSON.stringify(forms));
     document.getElementById("question-popup").classList.remove("open");
     loadForm(getForm().questions.length);
   }
 
-
-  $( document ).ready(function() {
+  $(document).ready(function() {
     const url = new URL(window.location.href); 
     formId = url.searchParams.get("fid");
     if(formId == null){
