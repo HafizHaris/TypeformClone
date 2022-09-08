@@ -47,4 +47,8 @@ $(document).ready(function() {
 	  $("#forms-preview").css('display','none');
 	  $("#welcome").css('display','flex');
 	}
+
+	let username = window.localStorage.getItem('username');
+	if (useruser == null) username = "Guest";
+	alert(username);
 });

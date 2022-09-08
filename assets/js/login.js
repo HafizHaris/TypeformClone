@@ -27,7 +27,8 @@ LoginPassword.onfocusout = LoginPassword.onkeyup = function() {
 //   login with google
 function handleCredentialResponse(response) {
     const responsePayload = decodeJwtResponse(response.credential);
-    alert(responsePayload.name);
+    window.localStorage.setItem('username', responsePayload.name);
+    window.location.href = "dashboard.html";
 }
 window.onload = function () {
     google.accounts.id.initialize({
