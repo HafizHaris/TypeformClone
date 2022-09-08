@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+:root{
+    --dark: rgb(38, 38, 39);
+    --grey: rgb(119, 119, 119);
+    --lightgrey: rgb(195, 195, 195);
+    --danger: rgb(227, 72, 67);
+}
+*{
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    color:var(--dark);
+}
+.login-box{
+    width:270px;
+    margin-top:50px;
+}
+.login-box form label{
+    margin-bottom:8px;
+    margin-top: 12px;
+    font-weight: normal;
+}
+.login-box form input{
+    padding: 9px 12px;
+    border-radius: 3px;
+    width: 100%;
+    font-size:14px;
+    font-weight:normal !important;
+    color: var(--grey);
+    margin-bottom:9px;
+    border:1px solid var(--lightgrey);
+}
+.login-box form input:focus-visible, .login-box form input:hover{
+    outline:none;
+    border:0.5px solid var(--dark);
+}
+.login-box form input::placeholder {
+    color: var(--lightgrey);    
+}
+.login-box form a, .sm-a{
+    color: var(--grey);
+    font-size:14px;
+    font-weight: normal;
+    text-decoration:underline;
+}
+.sm-a:hover{
+    color: var(--grey);
+}
+.btn-dark{
+    background: var(--dark);
+    font-weight:normal;
+}
+.or-separator {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom:4px;
+    font-weight:normal;
+    color: var(--grey);
+    background:
+      linear-gradient(var(--grey) 0 0) left,
+      linear-gradient(var(--grey) 0 0) right;
+    background-size: 40% 1.2px;
+    background-repeat: no-repeat;
+}
+.social-login-button {
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(94, 94, 94);
+    display: block;
+    font-size: 15px;
+    font-weight:normal !important;
+    padding:8px;
+    margin-top: 15px;
+    padding-left: 65px;
+    padding-right: 40px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:100%;
+    background-color: rgb(251, 251, 251);
+    border: 1px solid var(--lightgrey);
+    background-position: 15px 50%,0 0;
+}
+.social-login-button:hover {
+    text-decoration: none;
+    color:var(--dark);
+}
+.google-login{
+    background: url('../images/google-icon.png') no-repeat 10px,linear-gradient(90deg,rgb(255, 255, 255) 50px,rgb(251, 251, 251) 0);
+}
+
+.microsoft-login{
+    background: url('../images/microsoft-icon.png') no-repeat 10px,linear-gradient(90deg,rgb(255, 255, 255) 50px,rgb(251, 251, 251) 0);
+}
+.signup-section {
+    position:absolute; 
+    right:20px; 
+    top:8px;
+}
+.signup-section span{
+    font-size: 14px;
+    font-weight: normal;
+}
+.signup-section a.btn{
+    margin: 0 5px;
+    font-size:13px;
+    padding:4px 11px;
+    font-weight:normal;
+    border-radius:2px;
+    text-decoration:none;
+}
+.signup-section a.btn:hover{
+    background: rgb(255,255,255);
+}
+.signup-section a{
+    color:rgb(0,0,0);
+    font-size:14px;
+    font-weight:normal;
+    text-decoration:underline;
+}
+.login-box h2{
+    font-size:20px; 
+    line-height:24px;
+    font-weight:normal;
+    color:var(--grey);
+}
+.field-error{
+    color: var(--danger); 
+    font-size: 14px; 
+    font-weight: normal;
+    display: none;
+}
+.field-error i{
+    display:inline;
+    color: var(--danger);
+    margin-right:4px;
+}
+
+/* for responsiveness */
+@media screen and (max-width:1024px){
+    .signup-section a:not(.btn){
+        display:none;
+    }
+    .login-box {
+        margin-top:60px;
+    }
+}
